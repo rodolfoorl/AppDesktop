@@ -1,0 +1,47 @@
+﻿<theme:MetroWindow x:Class="Desktop.GrupoBW.JanelaInicial"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:theme="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:local="clr-namespace:Desktop.GrupoBW"
+        xmlns:views="clr-namespace:Desktop.GrupoBW.Views"
+        xmlns:uc="clr-namespace:Desktop.GrupoBW.AppModulos"
+        Title="DESKTOP BW"         
+        GlowBrush="{DynamicResource MahApps.Brushes.Accent}">
+
+
+    <!-- MENU SUPERIOR -->
+    <theme:MetroWindow.LeftWindowCommands>
+        <theme:WindowCommands>
+            <Button Content="MENU" TextBlock.FontWeight="Bold" Opacity="1" Click="MenuSuperior_Click">
+                
+            </Button>
+        </theme:WindowCommands>
+    </theme:MetroWindow.LeftWindowCommands>
+    
+    <Grid PreviewMouseDown="ClickOut">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="25"/>
+        </Grid.RowDefinitions>
+
+        <!-- VIEWS -->
+        <Grid Background="{StaticResource MahApps.Brushes.Gray8}">
+            <Grid Background="White" Margin="20" Style="{StaticResource GridShadow}">
+                <ContentControl x:Name="ContentControlViews" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+            </Grid>
+        </Grid>
+
+        <!-- BARRA INFERIOR -->
+        <uc:Status x:Name="ucStatus" Grid.Row="1"/>
+
+        <!-- POPUP DE MSG -->
+        <uc:Aviso x:Name="ucAviso" Grid.RowSpan="2" VerticalAlignment="Bottom"/>
+        
+        <!-- MENU LATERAL -->
+        <uc:MenuLateral x:Name="ucMenuLateral" Grid.RowSpan="2" />
+
+    </Grid>
+</theme:MetroWindow>

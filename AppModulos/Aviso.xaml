@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="Desktop.GrupoBW.AppModulos.Aviso"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Desktop.GrupoBW.AppModulos"
+             xmlns:theme="http://metro.mahapps.com/winfx/xaml/controls">
+    <Grid>
+        <theme:Flyout x:Name="FlyoutAviso" Position="Bottom" Visibility="Collapsed" CloseButtonVisibility="Collapsed" Background="{StaticResource MahApps.Brushes.AccentBase}" Grid.RowSpan="2" VerticalAlignment="Bottom"  Height="50" Margin="40,15">
+            <theme:Flyout.Effect>
+                <DropShadowEffect BlurRadius="10" ShadowDepth="3" Direction="-45" Color="Black" Opacity="0.2"/>
+            </theme:Flyout.Effect>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="75"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock x:Name="AvisoMSG" Foreground="White" Grid.ColumnSpan="2" VerticalAlignment="Center" FontSize="13" HorizontalAlignment="Center"/>
+
+                <Button Foreground="White" Grid.Column="1" Style="{StaticResource MahApps.Styles.Button.Hamburger}" HorizontalContentAlignment="Left" Padding="10,10" Click="ClickFechar">
+                    <Button.Content>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="FECHAR" FontSize="11"/>
+                            <TextBlock Text="X" Margin="5,0" FontSize="11"/>
+                        </StackPanel>
+                    </Button.Content>
+                </Button>
+            </Grid>
+        </theme:Flyout>
+    </Grid>
+</UserControl>

@@ -1,0 +1,17 @@
+﻿<Application x:Class="Desktop.GrupoBW.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Desktop.GrupoBW"
+             StartupUri="JanelaInicial.xaml">
+    <Application.Resources>
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Desktop.GrupoBW;component/AppStyle/Window/Base.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Desktop.GrupoBW;component/AppStyle/Window/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Desktop.GrupoBW;component/AppStyle/Window/Color.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>
